@@ -7,3 +7,8 @@ function printMessage(msg) {
 function clearMessages() {
 	document.getElementById('messages').innerHTML = '';
 }
+
+function deletePoints() {
+	scorePlayer.innerHTML = '0';
+	scoreComputer.innerHTML = '0';
+}

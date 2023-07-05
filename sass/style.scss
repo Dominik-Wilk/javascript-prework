@@ -1,0 +1,77 @@
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	margin: 0;
+}
+
+body {
+	height: 100vh;
+	background-color: #fff;
+	color: #000;
+	font-size: 20px;
+	line-height: 1.7;
+}
+
+.container {
+	max-width: 1480px;
+	padding: 0 20px;
+	margin: 0 auto;
+	display: flex;
+	flex-direction: row;
+}
+
+.wrapper {
+	width: 100vw;
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+h2 {
+	text-transform: uppercase;
+	font-size: 72px;
+}
+#buttons {
+	button {
+		padding: 35px;
+		cursor: pointer;
+		background-color: #fff;
+		border: none;
+		font-size: 0;
+	}
+	button:not(:last-of-type) {
+		margin-right: 120px;
+	}
+	i {
+		font-size: 70px;
+	}
+}
+#messages {
+	text-align: center;
+}
+
+#score {
+	font-size: 50px;
+}
+
+h3 {
+	display: flex;
+	justify-content: center;
+	width: 100%;
+	font-size: 48px;
+}
+.results {
+	font-size: 42px;
+	text-align: center;
+	&__info {
+		font-size: 20px;
+		opacity: 0.5;
+	}
+	button {
+		padding: 20px 40px;
+		text-transform: uppercase;
+		cursor: pointer;
+	}
+}
