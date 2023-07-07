@@ -35,6 +35,7 @@ h2 {
 }
 #buttons {
 	button {
+		color: royalblue;
 		padding: 35px;
 		cursor: pointer;
 		background-color: #fff;
@@ -73,5 +74,10 @@ h3 {
 		padding: 20px 40px;
 		text-transform: uppercase;
 		cursor: pointer;
+		color: #fff;
+		background-color: royalblue;
+		border-radius: 3px;
+		border: none;
+		font-size: 25px;
 	}
 }
