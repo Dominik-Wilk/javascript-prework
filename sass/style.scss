@@ -12,6 +12,16 @@ body {
 	font-size: 20px;
 	line-height: 1.7;
 }
+button {
+	padding: 20px 40px;
+	text-transform: uppercase;
+	cursor: pointer;
+	color: #fff;
+	background-color: royalblue;
+	border-radius: 3px;
+	border: none;
+	font-size: 25px;
+}
 
 .container {
 	max-width: 1480px;
@@ -70,14 +80,8 @@ h3 {
 		font-size: 20px;
 		opacity: 0.5;
 	}
-	button {
-		padding: 20px 40px;
-		text-transform: uppercase;
-		cursor: pointer;
-		color: #fff;
-		background-color: royalblue;
-		border-radius: 3px;
-		border: none;
-		font-size: 25px;
-	}
+}
+
+.fast-play {
+	margin-top: 50px;
 }

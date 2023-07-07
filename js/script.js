@@ -4,7 +4,7 @@ let scoreComputer = document.getElementById('score-computer');
 function playGame(playerInput) {
 	clearMessages();
 
-	let randomNumber = Math.floor(Math.random() * 3 + 1);
+	let randomNumber = Math.floor(Math.random() * 8 + 1);
 	let playerMove = getMoveName(playerInput);
 	let computerMove = getMoveName(randomNumber);
 
@@ -13,18 +13,14 @@ function playGame(playerInput) {
 			return 'kamień';
 		} else if (moveId == 2) {
 			return 'papier';
-		} else if (moveId == 3) {
+
+			// Improve our winning rate by 75% when we select rock.
+		} else if (moveId >= 3 && moveId <= 8) {
 			return 'nożyce';
 		}
-		printMessage('Nie znam ruchu o id ' + moveId + '.');
-		return 'nieznany ruch';
 	}
 
-	// console.log('Wylosowana liczba to: ' + randomNumber);
-
 	printMessage('Ruch komputera: ' + computerMove);
-
-	// console.log('Gracz wybrał: ' + playerInput);
 
 	printMessage('Twój ruch to: ' + playerMove);
 
@@ -45,6 +41,7 @@ function playGame(playerInput) {
 	}
 	displayResult(computerMove, playerMove);
 }
+
 document.getElementById('play-rock').addEventListener('click', function () {
 	playGame(1);
 });
@@ -57,5 +54,10 @@ document.getElementById('play-scissors').addEventListener('click', function () {
 
 document.getElementById('results-btn').addEventListener('click', function () {
 	deletePoints();
+	clearMessages();
+});
+
+document.getElementById('fast-game-btn').addEventListener('click', function () {
+	fastGame();
 	clearMessages();
 });
