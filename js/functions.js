@@ -8,10 +8,10 @@ function clearMessages() {
 	document.getElementById('messages').innerHTML = '';
 }
 
-function deletePoints() {
-	scorePlayer.innerHTML = '0';
-	scoreComputer.innerHTML = '0';
-}
+// function deletePoints() {
+// 	scorePlayer.innerHTML = '0';
+// 	scoreComputer.innerHTML = '0';
+// }
 
 function fastGame() {
 	for (let i = 0; i <= 1000; i++) {
