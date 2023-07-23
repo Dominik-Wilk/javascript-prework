@@ -4,8 +4,7 @@
   const playGame = function (playerInput) {
     clearMessages();
 
-    const randomNumber = Math.floor(Math.random() * 8 + 1);
-
+    const randomNumber = Math.floor(Math.random() * 3 + 1);
     const getMoveName = function (moveId) {
       if (moveId == 1) {
         return 'kamień';
@@ -38,7 +37,7 @@
         startConfetti();
       } else {
         printMessage('Komputer wygrywa!');
-        removeConfetti();
+        stopConfetti();
         scoreComputer.textContent++;
       }
     };
