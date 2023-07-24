@@ -44,11 +44,11 @@
     displayResult(computerMove, playerMove);
   };
 
-  const fastGame = function () {
-    for (let i = 0; i <= 1000; i++) {
-      playGame(1);
-    }
-  };
+  // const fastGame = function () {
+  //   for (let i = 0; i <= 1000; i++) {
+  //     playGame(1);
+  //   }
+  // };
 
   document.getElementById('play-rock').addEventListener('click', function () {
     playGame(1);
@@ -66,9 +66,16 @@
     removeConfetti();
   });
 
-  document.getElementById('fast-game-btn').addEventListener('click', function () {
-    fastGame();
-    clearMessages();
-    removeConfetti();
-  });
+  // document.getElementById('fast-game-btn').addEventListener('click', function () {
+  //   fastGame();
+  //   clearMessages();
+  //   removeConfetti();
+  // });
+
+  const appHeight = () => {
+    const doc = document.documentElement;
+    doc.style.setProperty('--app-height', `${window.innerHeight}px`);
+  };
+  window.addEventListener('resize', appHeight);
+  appHeight();
 }
